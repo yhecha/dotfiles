@@ -6,3 +6,4 @@ Editor configuration files.
 ・vim  
 ・Eclipse (neon:5.5.0)  
 ・秀丸 ()  
+・iTerm2
