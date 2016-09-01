@@ -1,0 +1,2 @@
+# dotfiles
+Editor configuration files.
