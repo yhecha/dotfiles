@@ -55,7 +55,7 @@ set directory=$HOME/vimbackup
 set number
 
 " 新しい行のインデントを現在の行と同じにする
-set autoindent
+"set autoindent
 
 " インクリメンタールサーチ有効(逐次検索)
 set incsearch
@@ -95,11 +95,14 @@ nnoremap <ESC><ESC> :nohlsearch<CR>
 "    let g:vim_markdown_folding_disabled=1
 " }}}
 
-"PreVim
+" PreVim Settings
 augroup PrevimSettings
     autocmd!
     autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
+
+" markdownの折りたたみを無効にする
+let g:vim_markdown_folding_disabled=1
 
 "----------
 " カラースキーム
