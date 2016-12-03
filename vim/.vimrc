@@ -26,14 +26,22 @@ call neobundle#begin(expand('/Users/hecha/.vim/bundle'))
 " NeoBundleのバージョンをNeoBundle自身で管理する
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" インストールしたいプラグインを記述
-" 下記は unite.vimというプラグインをインストールする例
+" --- 以下にインストールしたいプラグインを記述 ---
+
+" unite.vimプラグイン
 NeoBundle 'Shougo/unite.vim'
 
 " Markdown リアルタイムプレビュー用プラグイン
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
+
+" NERDTree
+NeoBundle 'scrooloose/nerdtree'
+" NERDTree key map
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+" ------------------------------------------------
 
 " NeoBundle設定の終了
 call neobundle#end()
@@ -44,7 +52,7 @@ filetype plugin indent on
 NeoBundleCheck
 "*******************************************
 
-" 2016/10/22 Add **********
+" Customize **********
 "バックアップファイルのディレクトリを指定する
 set backupdir=$HOME/vimbackup
 
@@ -54,17 +62,8 @@ set directory=$HOME/vimbackup
 " Line number
 set number
 
-" 新しい行のインデントを現在の行と同じにする
-"set autoindent
-
 " インクリメンタールサーチ有効(逐次検索)
 set incsearch
-
-" タブ文字、行末など不可視文字を可視化
-"set list
-
-" 新しい行を作った時に高度な自動インデントを行う
-"set smartindent
 
 " タブの代わりに空白文字を挿入する
 set expandtab
@@ -85,21 +84,14 @@ set grepprg=grep\ -nh
 " 検索結果のハイライトをEsc連打でクリアする
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
-""" markdown {{{
-    " デフォルトだと拡張子mdのファイルはmodula2と認識されるのでそれを防ぐ。
-"    autocmd BufRead,BufNewFile *.mkd  set filetype=markdown
-"    autocmd BufRead,BufNewFile *.md  set filetype=markdown
-"    " Need: kannokanno/previm
-"    nnoremap <silent> <C-p> :PrevimOpen<CR> " Ctrl-pでプレビュー
-"    " 自動で折りたたまないようにする
-"    let g:vim_markdown_folding_disabled=1
-" }}}
-
 " PreVim Settings
 augroup PrevimSettings
     autocmd!
     autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
+
+" Previm key map
+nnoremap <silent><C-p> :PrevimOpen<CR>
 
 " markdownの折りたたみを無効にする
 let g:vim_markdown_folding_disabled=1
