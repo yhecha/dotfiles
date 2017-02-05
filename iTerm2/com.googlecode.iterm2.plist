@@ -123,9 +123,9 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>457 403 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>644 268 796 473 0 0 1440 877 </string>
+	<string>464 184 918 495 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>268 40 1105 837 0 0 1440 877 </string>
+	<string>65 19 1270 858 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>279 140 850 706 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -983,6 +983,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/hecha/dotfiles/iTerm2</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -1004,7 +1006,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-11-09T04:51:08Z</date>
+	<date>2017-01-22T05:15:12Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1050,6 +1052,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.12</string>
+	<string>3.0.13</string>
 </dict>
 </plist>
