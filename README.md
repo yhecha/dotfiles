@@ -16,7 +16,7 @@ $ git clone https://github.com/yhecha/dotfiles
 
 ## シンボリックリンクを貼る
 ```
-$ ln -sf /Users/{ユーザー名}/dotfiles/vim/.vimrc ~/.vimrc
+$ ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
 ```
 
 -s：シンボリックリンクを作成。  
@@ -27,5 +27,5 @@ $ ln -sf /Users/{ユーザー名}/dotfiles/vim/.vimrc ~/.vimrc
 GitHubでの管理対象とはしない。  
 
 ```
-$ ln -nfs /Users/{ユーザー名}/dotfiles/VScode/Code/User /Users/{ユーザー名}/Library/Application Support/Code/User
+$ ln -sf ~/dotfiles/VScode/Code/User ~/Library/Application Support/Code/User
 ```
