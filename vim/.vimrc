@@ -3,7 +3,7 @@ set modelines=0		" CVE-2007-2438
 
 " Normally we use vim-extensions. If you want true vi-compatibility
 " remove change the following statements
-set nocompatible	" Use Vim defaults instead of 100% vi compatibility
+" set nocompatible	" Use Vim defaults instead of 100% vi compatibility
 set backspace=2		" more powerful backspacing
 
 " Don't write backup file if vim is being called by "crontab -e"
@@ -17,18 +17,18 @@ if has('vim_starting')
     if &compatible
         set nocompatible
     endif
-    set runtimepath+=/Users/hecha/.vim/bundle/neobundle.vim/
+    set runtimepath+=/Users/y_yano/.vim/bundle/neobundle.vim/
+    " set runtimepath+=/Users/hecha/.vim/bundle/neobundle.vim/
 endif
 
 " NeoBundle設定の開始
-call neobundle#begin(expand('/Users/hecha/.vim/bundle'))
+call neobundle#begin(expand('/Users/y_yano/.vim/bundle'))
+" call neobundle#begin(expand('/Users/hecha/.vim/bundle'))
 
 " NeoBundleのバージョンをNeoBundle自身で管理する
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" --- 以下にインストールしたいプラグインを記述 ---
-
-" unite.vimプラグイン
+" インストールしたいプラグインを記述
 NeoBundle 'Shougo/unite.vim'
 
 " Markdown リアルタイムプレビュー用プラグイン
@@ -36,23 +36,20 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 
-" NERDTree
+" NERDTree install & keymap
 NeoBundle 'scrooloose/nerdtree'
-" NERDTree key map
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
-
-" ------------------------------------------------
 
 " NeoBundle設定の終了
 call neobundle#end()
 
 filetype plugin indent on
-                 
+
 " vim起動時に未インストールのプラグインをインストールする
 NeoBundleCheck
 "*******************************************
 
-" Customize **********
+" 2016/10/22 Add **********
 "バックアップファイルのディレクトリを指定する
 set backupdir=$HOME/vimbackup
 
@@ -71,6 +68,9 @@ set expandtab
 " tabキーを押した時の幅を設定
 set tabstop=4
 
+" 自動インデントの幅
+set shiftwidth=4
+
 " 閉じカッコが入力されたとき、対応するカッコを表示する。
 set showmatch
 
@@ -84,6 +84,12 @@ set grepprg=grep\ -nh
 " 現在行をハイライト
 set cursorline
 
+" 改行時に前の行のインデントを継続する
+set autoindent
+
+" 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
+set smartindent
+
 " 検索結果のハイライトをEsc連打でクリアする
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
@@ -92,10 +98,8 @@ augroup PrevimSettings
     autocmd!
     autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
-
-" Previm key map
+" PreVim kemap
 nnoremap <silent><C-p> :PrevimOpen<CR>
-
 " markdownの折りたたみを無効にする
 let g:vim_markdown_folding_disabled=1
 
@@ -104,4 +108,3 @@ let g:vim_markdown_folding_disabled=1
 "----------
 colorscheme molokai
 syntax on
-
