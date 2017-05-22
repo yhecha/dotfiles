@@ -107,8 +107,6 @@ set incsearch
 
 
 " Other ----------
-" 入力モード中に素早く ff と入力したときはESC扱い
-inoremap ff <ESC>
 " 検索結果のハイライトをEsc連打でクリアする
 nnoremap <ESC><ESC> :nohlsearch<CR>
 " 検索後にジャンプした際に検索単語を画面中央に持ってくる
