@@ -48,3 +48,13 @@ repo = 'cespare/vim-toml'
 [[plugins]]
 repo = 'tomasr/molokai'
 
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+# Markdown previm
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+[[plugins]]
+repo = 'kannokanno/previm'
+[[plugins]]
+repo = 'tyru/open-browser.vim'
