@@ -92,7 +92,8 @@ set smartindent
 set backspace=indent,eol,start
 " Share clipbord
 set clipboard=unnamed
-
+" NERD Tree Toggle mapping.
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 " Search ----------
 " 検索時に大文字小文字を区別しない
@@ -126,4 +127,3 @@ augroup END
 nnoremap <silent><C-p> :PrevimOpen<CR>
 " markdownの折りたたみを無効にする
 let g:vim_markdown_folding_disabled=1
-
