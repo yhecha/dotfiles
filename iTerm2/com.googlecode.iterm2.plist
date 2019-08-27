@@ -127,9 +127,9 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>464 162 918 495 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>110 19 1090 837 0 0 1440 877 </string>
+	<string>37 44 1333 833 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>279 140 850 706 0 0 1440 877 </string>
+	<string>279 5 1090 837 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -916,6 +916,8 @@
 	<string>432B77E1-224A-4362-85E1-17EFD67C0800</string>
 	<key>NoSyncLastTipTime</key>
 	<real>490371831.89997798</real>
+	<key>NoSyncNeverAskAboutSettingAlternateMouseScroll</key>
+	<true/>
 	<key>NoSyncPermissionToShowTip</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
@@ -950,6 +952,8 @@
 	<false/>
 	<key>PasteFromClipboard</key>
 	<false/>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>4</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1008,7 +1012,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-04-07T16:48:42Z</date>
+	<date>2017-09-23T08:35:03Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1054,6 +1058,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.beta.3</string>
+	<string>3.1.beta.10</string>
 </dict>
 </plist>

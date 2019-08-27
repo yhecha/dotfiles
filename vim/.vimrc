@@ -11,44 +11,6 @@ au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
 " Don't write backup file if vim is being called by "chpass"
 au BufWrite /private/etc/pw.* set nowritebackup nobackup
 
-" 2016/11/04 NeoBundle config Add **********
-" 起動時にruntimepathにNeoBundleのパスを追加する
-if has('vim_starting')
-    if &compatible
-        set nocompatible
-    endif
-    set runtimepath+=/Users/y_yano/.vim/bundle/neobundle.vim/
-    " set runtimepath+=/Users/hecha/.vim/bundle/neobundle.vim/
-endif
-
-" NeoBundle設定の開始
-call neobundle#begin(expand('/Users/y_yano/.vim/bundle'))
-" call neobundle#begin(expand('/Users/hecha/.vim/bundle'))
-
-" NeoBundleのバージョンをNeoBundle自身で管理する
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" インストールしたいプラグインを記述
-NeoBundle 'Shougo/unite.vim'
-
-" Markdown リアルタイムプレビュー用プラグイン
-NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'kannokanno/previm'
-NeoBundle 'tyru/open-browser.vim'
-
-" NERDTree install & keymap
-NeoBundle 'scrooloose/nerdtree'
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
-
-" NeoBundle設定の終了
-call neobundle#end()
-
-filetype plugin indent on
-
-" vim起動時に未インストールのプラグインをインストールする
-NeoBundleCheck
-"*******************************************
-
 " 2016/10/22 Add **********
 "バックアップファイルのディレクトリを指定する
 set backupdir=$HOME/vimbackup
@@ -69,7 +31,7 @@ set expandtab
 set tabstop=4
 
 " 自動インデントの幅
-set shiftwidth=4
+" set shiftwidth=4
 
 " 閉じカッコが入力されたとき、対応するカッコを表示する。
 set showmatch
